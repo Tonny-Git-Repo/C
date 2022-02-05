@@ -55,7 +55,13 @@ int evaluate(Node* node){
                 result = lft * rgt;
                 break;
             case '/':
-                rgt == 0? result = lft: lft + rgt;
+                if(rgt == 0){
+                    printf("Division per 0 is not allowed!\n");
+                    exit(1);
+                }else{
+                    result = lft/rgt;
+                }
+                break;
             case '%':
                 result = lft % rgt;
                 break;
